@@ -1,5 +1,5 @@
 # ============================================================
-# 17_FBXL12_Wnt_relationship
+# 16_FBXL12_Wnt_relationship
 # 功能: FBXL12 × Wnt/β-catenin 探索性关系与空间验证 (脚本 17)
 # 定位: 探索性(关系+空间) + 验证扩展电池(A1/B1/C3/D1/D3/F, 对应 analysis_plan_Wnt.md §4)
 # 可视化: results/17_FBXL12_Wnt_relationship/{Figure(.pdf), table(.csv)}
