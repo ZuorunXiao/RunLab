@@ -1,4 +1,3 @@
-#!/usr/bin/env Rscript
 # =============================================================================
 # 02_unsupervised_cluster.R
 # 功能: 8 个 ST 样本无监督聚类 (FindClusters), 输出空间聚类图 (Fig 1F)
@@ -37,10 +36,10 @@ sci_save <- function(plot_obj, filename, width = 10, height = 8) {
 }
 
 # --- 目录结构 ---------------------------------------------------------------
-BASE_DIR <- "G:/CRLM/ST/scCRLM"
+BASE_DIR <- "X:/XX"
 TAB01_DIR <- file.path(BASE_DIR, "results/01_read_qc/table")
-FIG_DIR  <- "G:/CRLM/ST/scCRLM/results/02_unsupervised_cluster/Figure"
-TAB_DIR  <- "G:/CRLM/ST/scCRLM/results/02_unsupervised_cluster/table"
+FIG_DIR  <- "X:/XX/02_unsupervised_cluster/Figure"
+TAB_DIR  <- "X:/XX/02_unsupervised_cluster/table"
 dir.create(FIG_DIR, recursive = TRUE, showWarnings = FALSE)
 dir.create(TAB_DIR, recursive = TRUE, showWarnings = FALSE)
 
