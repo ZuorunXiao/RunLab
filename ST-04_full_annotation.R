@@ -1,5 +1,5 @@
 # =============================================================================
-# 03c_full_annotation.R
+# 04_full_annotation.R
 # 功能: ST 全细胞型空间注释 —— 输出每样本结构区图 (Region_ST-*.pdf) + 逐 spot 全注释 CSV:
 #   (A) 结构区图 (Region_ST-*.pdf): 无监督聚类(02)出区域骨架 + 标志基因面板逐 cluster 命名
 #       (每 cluster 输出 8 面板标志基因表达表供人工/H&E 判读; 区域名由"看每簇标志基因 + 相对基线
@@ -13,6 +13,12 @@
 #   注: 免疫主型/亚型属 03(Fig 1G/2C), 本脚本方案 A (2026-09-06) 不再叠加自造免疫合并规则,
 #       仅输出 Fig 1F 结构区 8 类注释。pred_main/pred_score 仅作 CSV 参考列保留。
 # 定位: Wu et al. Cancer Discovery 2022 (doi:10.1158/2159-8290.CD-21-0316)
+        
+        
+        
+        
+        
+        
 # 管线对照(逐字原文, 见工作区 _paper_fulltext.txt):
 #   ST Methods ("ST Data Processing and Cell-Type Estimation", L308): "we used SCTransform
 #     (95) to normalize data, RunPCA to perform dimension reduction, FindNeighbors and
