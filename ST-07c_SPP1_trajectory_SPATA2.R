@@ -32,13 +32,6 @@ dir.create(TAB_DIR, recursive = TRUE, showWarnings = FALSE)
 
 # --- 常量 ---------------------------------------------------------------
 SAMPLE_ID <- c("ST-P1_liver", "ST-P1_colon", "ST-P2_liver", "ST-P2_colon")
-# ⚠️ 2026-09-10 用户强约束: 这是我们"自己的分析", 不锚定原文靶点; 主特征改为 §4 的
-#   4 个核心签名(我们分析的特征性结果), 去掉原文本免疫锚点 MRC1_CCL18_Macrophages/FOXP3_Treg.
-# 角色拆分(经 SPATA2 源码实测): spatialTrajectoryScreening 的 loess 梯度拟合仅稳健接受
-#   词表基因(来自 count_mtr), 对 addFeatures 注册的连续签名会因 x 轴退化崩溃; 而
-#   plotStsLineplot / plotStsHeatmap 可正常采样任意 addFeatures 特征. 故:
-#   - SIG_FEATS : 我们分析 §4 核心签名, 用于趋势线/热图可视化(主交付).
-#   - GENE_FEATS: 4 轴基因, 用于轨迹显著性筛选(稳健变量, 作验证).
 SIG_FEATS  <- c("SPP1_mac", "PLAUR_mac", "PLAU_tumor", "FBXL12_tumor")   # §4 hallmark 签名(可视化主特征)
 GENE_FEATS <- c("FBXL12", "PLAU", "PLAUR", "SPP1")                       # 4 轴基因(轨迹筛选稳健变量)
 TRAJ_NAME <- "normal_to_tumor"           # 轨迹 id (非肿瘤质心 -> 肿瘤质心)
