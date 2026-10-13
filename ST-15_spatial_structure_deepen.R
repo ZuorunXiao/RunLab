@@ -1,7 +1,7 @@
 # =============================================================================
 # 15_spatial_structure_deepen.R
-# 功能: 空间结构深化层——(⑪) SPP1+ TAM 生态位的径向衰减; (⑯) PLAU/PLAUR/SPP1
-#       三节点共定位; (⑰) 肿瘤侵袭前沿的连续梯度(loess)
+# 功能: 空间结构深化层——SPP1+ TAM 生态位的径向衰减; PLAU/PLAUR/SPP1
+#       三节点共定位; 肿瘤侵袭前沿的连续梯度(loess)
 # 定位: n=2(P1/P2 四切片)下补充空间维度的严谨证据, 不扩大样本、不改写既有脚本
 # 可视化: RadialDecay_sctSPP1.pdf / RadialDecay_PLAURmac.pdf (生态位径向衰减, 双面板)
 #         TripleColocalization_compartment.pdf / _autocorr.pdf / _triplets.pdf
@@ -10,10 +10,9 @@
 # 数据: 输入 results/06.../table/signature_master.rds
 #            results/12.../table/Triplets_tumor.csv / Triplets_myeloid.csv
 #       输出 results/15.../Figure/ + results/15.../table/
-# 依据: ⑪ 量化 SPP1+ TAM 聚集体空间尺度(随距离衰减); ⑯ 把 10 的双高共位升级为
-#       三基因共定位并量化其空间聚集; ⑰ 用"到肿瘤前沿距离"作连续变量, loess
+# 依据: 量化 SPP1+ TAM 聚集体空间尺度(随距离衰减);  把 10 的双高共位升级为
+#       三基因共定位并量化其空间聚集; 用"到肿瘤前沿距离"作连续变量, loess
 #       刻画 SPP1+ TAM 沿侵袭前沿的富集梯度, 避免用离散区室掩盖连续结构
-# 说明: 本脚本只读既有产物 + 重算, 不修改 00-13 任何文件
 # =============================================================================
 
 # --- 包加载(可视化) ------------------------------------------------------
