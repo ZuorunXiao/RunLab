@@ -18,8 +18,8 @@ suppressPackageStartupMessages({
 })
 
 # --- Directories --------------------------------------------------
-BASE_E <- "X:/XX/CRLM_scRNA_08"
-BASE_F <- "X:/XX/CRLM_scRNA_08"
+BASE_E <- "X:/XX"
+BASE_F <- "X:/XX"
 KODIR  <- file.path(BASE_E, "results", "03_GRN_VirtualKO", "table")
 OEDIR  <- file.path(BASE_E, "results", "04_VirtualOE", "table")
 TAB_DIR <- file.path(BASE_F, "table")
