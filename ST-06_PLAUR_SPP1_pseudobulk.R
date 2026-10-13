@@ -1,5 +1,5 @@
 # ===============================================================
-# 06b_PLAUR_SPP1_pseudobulk.R
+# 06_PLAUR_SPP1_pseudobulk.R
 # 功能: 4 目标基因的区室 pseudobulk 差异分析(sum 聚合 raw counts + edgeR)
 # 定位: 替代 06 中 spot 水平 SCT log1p 箱线/检验; 规避检测下限离散化
 #       (SCT data 在 PLAU/FBXL12 上退化为 0/0.693/1.099 三档), 用负二项
